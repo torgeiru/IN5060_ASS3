@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import pyxdf
 from sys import argv
 
@@ -11,8 +13,15 @@ for stream in data:
 	stream_series_start = y[0]
 	stream_series_end = y[-1]
 
-	print(f"Stream name is {stream_name}")
-	print(f"Stream type is {stream_type}")
-	print(f"Stream series start is {stream_series_start}")
-	print(f"Stream series end is {stream_series_end}")
+	if stream_type == "Markers":
+		print(f"Stream name is {stream_name}")
+		print(f"Stream type is {stream_type}")
+		print(y)
+		#print(f"The length of the trial is {len(y)}")
 
+		#print(f"Stream series start is {stream_series_start}")
+		#print(f"Stream series start is {type(stream_series_start)}")
+		#print(f"Stream series end is {stream_series_end}")
+		#print(f"Stream series end is {type(stream_series_end)}")
+
+	print("____________________________________________________")
